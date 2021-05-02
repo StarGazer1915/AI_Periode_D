@@ -9,5 +9,4 @@ public interface Locatie {
     public String getVeld();
     public String getBnaam();
     public String getBprovincie();
-
 }

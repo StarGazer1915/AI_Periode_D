@@ -18,14 +18,17 @@ public class Trainingsveld extends Basis implements Locatie {
         this.veld = veld;
     }
 
+    @Override
     public String getVeld() {
         return veld;
     }
 
+    @Override
     public String getBnaam() {
         return null;
     }
 
+    @Override
     public String getBprovincie() {
         return null;
     }
@@ -33,9 +36,9 @@ public class Trainingsveld extends Basis implements Locatie {
     @Override
     public String toString() {
         return "Trainingsveld{" +
-                "Bnaam='" + getBnaam() +
-                "Bprovincie='" + getBprovincie() +
-                "veld='" + veld +
+                "Bnaam= '" + getBnaam() +
+                "' | Bprovincie= '" + getBprovincie() +
+                "' | veld= '" + veld +
                 '\'' +
                 '}';
     }

@@ -1,8 +1,10 @@
 package AP_Summatieve_Opdracht_1;
 
+import java.util.List;
+
 public class Training {
 
-    private final Trainee trainee; // List van trainees maken (methode addTrainee(), list .contains() trainee)
+    private Trainee trainee; // List van trainees maken (methode addTrainee(), list.contains() trainee)
     private final Locatie locatie;
     private final String tijdstip;
 
@@ -15,30 +17,28 @@ public class Training {
      * @param tijdstip : String
      */
 
-    public Training(Trainee trainee, Locatie locatie, String tijdstip) throws Exception {
-        if ( ! trainee.getProvincie().equals(locatie.getBprovincie())) {
-            throw new Exception("Provincie's komen niet overeen. Er kan geen training worden gepland voor '" + trainee.getNaam() + "'.");
-        }
-        else {
-            System.out.println("Provincie's komen overeen: Ja");
-            System.out.println("--- Training ---" +
-                    "\nNaam: " + trainee.getNaam() +
-                    "\nID: " + trainee.getId() +
-                    "\nBasis: " + locatie.getBnaam() +
-                    "\nVeld: " + locatie.getVeld() +
-                    "\nTijdstip: " + tijdstip + "\n");
-        }
+    public Training(Trainee trainee, Locatie locatie, String tijdstip) {
         this.trainee = trainee;
         this.locatie = locatie;
         this.tijdstip = tijdstip;
     }
 
-    @Override
-    public String toString() {
-        return "Training{" +
-                "trainee=" + trainee +
-                ", locatie=" + locatie +
-                ", tijdstip='" + tijdstip + '\'' +
-                '}';
+    static List addTrainee(List Soldaten, Trainee trainee) {
+        Soldaten.add(trainee);
+        return Soldaten;
     }
+
+    static void CheckTrainees(List Soldaten, Trainee trainee) {
+        for (Object temp : Soldaten) {
+            System.out.println(temp);
+        }
+    }
+
+    static void displayTrainees(List Soldaten) {
+        for (Object temp : Soldaten) {
+            System.out.println(temp);
+        }
+    }
+
+
 }

@@ -1,4 +1,6 @@
-package AP_Summatieve_Opdracht_1;
+package Trainingsplanner;
+
+import java.util.Objects;
 
 public class Basis {
 
@@ -24,6 +26,19 @@ public class Basis {
 
     public String getBprovincie() {
         return Bprovincie;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Basis basis = (Basis) o;
+        return Objects.equals(Bprovincie, basis.Bprovincie);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(Bprovincie);
     }
 
     @Override

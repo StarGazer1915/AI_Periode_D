@@ -1,10 +1,10 @@
-package AP_Summatieve_Opdracht_1;
+package Trainingsplanner;
 
 import java.util.List;
 
 public class Training {
 
-    private Trainee trainee; // List van trainees maken (methode addTrainee(), list.contains() trainee)
+    private final Trainee trainee;
     private final Locatie locatie;
 
     /**
@@ -19,9 +19,8 @@ public class Training {
         this.locatie = locatie;
     }
 
-    static List addTrainee(List Soldaten, Trainee trainee) {
+    static void addTrainee(List Soldaten, Trainee trainee) {
         Soldaten.add(trainee);
-        return Soldaten;
     }
 
     static void displayTrainees(List Soldaten) {
@@ -41,10 +40,18 @@ public class Training {
 
     static String createTraining(List Soldaten, Trainee trainee, Locatie locatie) {
         if (CheckIfTrainee(Soldaten, trainee) && locatie.getBprovincie().equals(trainee.getProvincie())) {
-            return "Training voor " + trainee.getNaam() + " is mogelijk.\n" +
+            return "Training voor " + trainee.getNaam() + " | ID: " + trainee.getId() + " is mogelijk.\n" +
                     "Basis: " + locatie.getBnaam() + " | Veld: " + locatie.getVeld();
         } else {
             return "Geen training mogelijk. Trainee maakt geen deel uit van deze geplande training.";
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Training{" +
+                "trainee=" + trainee +
+                ", locatie=" + locatie +
+                '}';
     }
 }

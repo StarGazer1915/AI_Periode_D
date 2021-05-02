@@ -1,4 +1,4 @@
-package AP_Summatieve_Opdracht_1;
+package Trainingsplanner;
 
 public class Persoon {
 

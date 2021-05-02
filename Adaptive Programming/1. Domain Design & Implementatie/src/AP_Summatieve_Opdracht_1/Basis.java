@@ -2,35 +2,35 @@ package AP_Summatieve_Opdracht_1;
 
 public class Basis {
 
-    private String b_naam;
-    private String b_provincie;
+    private final String Bnaam;
+    private final String Bprovincie;
 
     /**
      * Dit is de Basis-class, deze class bevat de naam en provincie van een militaire basis.
      * Deze class wordt ge-extend door de trainingsveld-class. (overerving)
      *
-     * @param b_naam
-     * @param b_provincie
+     * @param Bnaam String
+     * @param Bprovincie String
      */
 
-    public Basis(String b_naam, String b_provincie) {
-        this.b_naam = b_naam;
-        this.b_provincie = b_provincie;
+    public Basis(String Bnaam, String Bprovincie) {
+        this.Bnaam = Bnaam;
+        this.Bprovincie = Bprovincie;
     }
 
-    public String getB_naam() {
-        return b_naam;
+    public String getBnaam() {
+        return Bnaam;
     }
 
-    public String getB_provincie() {
-        return b_provincie;
+    public String getBprovincie() {
+        return Bprovincie;
     }
 
     @Override
     public String toString() {
         return "Basis{" +
-                "b_naam='" + b_naam + '\'' +
-                ", b_locatie='" + b_provincie + '\'' +
+                "Bnaam='" + Bnaam + '\'' +
+                ", Blocatie='" + Bprovincie + '\'' +
                 '}';
     }
 }

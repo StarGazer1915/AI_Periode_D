@@ -7,7 +7,7 @@ public interface Locatie {
      */
 
     public String getVeld();
-    public String getB_naam();
-    public String getB_provincie();
+    public String getBnaam();
+    public String getBprovincie();
 
 }

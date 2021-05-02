@@ -2,19 +2,19 @@ package AP_Summatieve_Opdracht_1;
 
 public class Trainingsveld extends Basis implements Locatie {
 
-    private String veld;
+    private final String veld;
 
     /**
      * Dit is de Trainingsveld-class, deze class bevat de naam van de basis, de provincie en het veld.
      * De basisnaam en provincie komen uit de Basis-class d.m.v. een overervingsrelatie.
      *
-     * @param b_naam
-     * @param b_provincie
-     * @param veld
+     * @param Bnaam String
+     * @param Bprovincie String
+     * @param veld String
      */
 
-    public Trainingsveld(String b_naam, String b_provincie, String veld) {
-        super(b_naam, b_provincie);
+    public Trainingsveld(String Bnaam, String Bprovincie, String veld) {
+        super(Bnaam, Bprovincie);
         this.veld = veld;
     }
 
@@ -22,11 +22,19 @@ public class Trainingsveld extends Basis implements Locatie {
         return veld;
     }
 
+    public String getBnaam() {
+        return null;
+    }
+
+    public String getBprovincie() {
+        return null;
+    }
+
     @Override
     public String toString() {
         return "Trainingsveld{" +
-                "b_naam='" + getB_naam() +
-                "b_provincie='" + getB_provincie() +
+                "Bnaam='" + getBnaam() +
+                "Bprovincie='" + getBprovincie() +
                 "veld='" + veld +
                 '\'' +
                 '}';

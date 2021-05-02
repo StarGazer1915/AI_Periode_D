@@ -17,17 +17,16 @@ public class Main {
         Trainingsveld V2 = new Trainingsveld("Jansenkazerne","Utrecht","40-P90");
 
         // ----------- Training CLASS TEST ----------- //
-        List<Soldaat> Soldaten = new ArrayList<Soldaat>();
+        Training T1 = new Training(S1, V1); // Maak een nieuw trainingsobject.
 
-        Training T1 = new Training(S1, V1,"9:45");
+        List<Soldaat> SoldatenT1 = new ArrayList<Soldaat>(); // Maak een lijst voor soldaten.
 
-        T1.addTrainee(Soldaten,S1);
-        T1.addTrainee(Soldaten,S2);
-        T1.addTrainee(Soldaten,S3);
+        T1.addTrainee(SoldatenT1,S1);
+        T1.addTrainee(SoldatenT1,S2);   // Voeg soldaten toe.
+        T1.addTrainee(SoldatenT1,S3);
 
-        T1.displayTrainees(Soldaten);
+        //T1.displayTrainees(SoldatenT1); // Print lijst van soldaten.
 
-        //T1.CheckTrainees(Soldaten,S1);
-
+        System.out.println(T1.createTraining(SoldatenT1,S1,V1)); // Kijk of er een training kan worden gepland.
     }
 }

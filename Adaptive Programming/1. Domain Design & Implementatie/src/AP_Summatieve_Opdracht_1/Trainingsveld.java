@@ -24,16 +24,6 @@ public class Trainingsveld extends Basis implements Locatie {
     }
 
     @Override
-    public String getBnaam() {
-        return null;
-    }
-
-    @Override
-    public String getBprovincie() {
-        return null;
-    }
-
-    @Override
     public String toString() {
         return "Trainingsveld{" +
                 "Bnaam= '" + getBnaam() +

@@ -15,6 +15,10 @@ public class Node {
         return naam;
     }
 
+    public HashMap getNodemap() {
+        return nodemap;
+    }
+
     public void setNodemap(HashMap nodemap) {
         this.nodemap = nodemap;
     }

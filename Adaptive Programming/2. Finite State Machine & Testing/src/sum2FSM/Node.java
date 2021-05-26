@@ -25,8 +25,7 @@ public class Node {
 
     public Node getNextState(String symbol) {
         if (nodemap.containsKey(symbol)) {
-            Node x = (Node)nodemap.get(symbol);
-            return x;
+            return (Node)nodemap.get(symbol);
         } else {
             return null;
         }

@@ -1,14 +1,13 @@
 package sum2FSM;
 
-import Formatief2A.Node;
-
 import java.util.HashMap;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        String input = "ADABFCEDEADEABFFC";
+        String input = "ABCDEF";
+        String woord = "ADABFCEDEADEABFFC";
 
         HashMap<String, Node> NodeMap0 = new HashMap<>();
         HashMap<String, Node> NodeMap1 = new HashMap<>();
@@ -59,9 +58,18 @@ public class Main {
         NodeMap5.put("D",S4);
         NodeMap5.put("E",S5);
 
+        S0.setNodemap(NodeMap0);
+        S1.setNodemap(NodeMap1);
+        S2.setNodemap(NodeMap2);
+        S3.setNodemap(NodeMap3);
+        S4.setNodemap(NodeMap4);
+        S5.setNodemap(NodeMap5);
 
         FSM fsm = new FSM(input, NodeMap0);
-        //fsm.startMachine("?");
+        fsm.startMachine(woord);
 
+        /**
+         * P.S. Sommige nodemaps zijn ingekort voor variatie/dynamiek.
+         */
     }
 }

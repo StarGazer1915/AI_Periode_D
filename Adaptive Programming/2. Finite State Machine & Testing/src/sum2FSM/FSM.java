@@ -16,23 +16,23 @@ public class FSM {
 
     public List startMachine(String woord) {
         /**
-         * Maak een lijst aan wat de nodes opslaat als strings wanneer hij er langs komt.
+         * Maak een lijst aan (path) welke de nodes krijgt als strings wanneer hij er langs komt.
          * Pak de eerste node als startpunt en zoek op basis van die node en de char uit het
          * woord de volgende node.
          */
 
-        List<String> Path = new ArrayList<>();
+        List<String> path = new ArrayList<>();
         Node state = (Node) startMap.values().toArray()[0];
         for (char ch: woord.toCharArray()) {
             Node newNode = state.getNextState(""+ch);
             if (newNode == null) {
                 continue;
             }
-            Path.add(newNode.getNaam());
+            path.add(newNode.getNaam());
             state = newNode;
         }
-        System.out.println(Path);
-        return Path;
+        System.out.println(path);
+        return path;
     }
 
     @Override

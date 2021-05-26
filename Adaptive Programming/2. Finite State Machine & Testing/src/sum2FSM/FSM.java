@@ -15,27 +15,24 @@ public class FSM {
     }
 
     public List startMachine(String woord) {
-        List<String> Nodes = new ArrayList<>();
+        /**
+         * Maak een lijst aan wat de nodes opslaat als strings wanneer hij er langs komt.
+         * Pak de eerste node als startpunt en zoek op basis van die node en de char uit het
+         * woord de volgende node.
+         */
 
+        List<String> Path = new ArrayList<>();
         Node state = (Node) startMap.values().toArray()[0];
-
         for (char ch: woord.toCharArray()) {
-            // Loop door alle symbolen van het woord heen en creer een
-            // nieuwe lijst van strings op basis van de namen van de eerder aangemaakte nodes.
             Node newNode = state.getNextState(""+ch);
             if (newNode == null) {
                 continue;
             }
-            Nodes.add(newNode.getNaam());
+            Path.add(newNode.getNaam());
             state = newNode;
         }
-        System.out.println(Nodes);
-        return Nodes;
-
-        // Let op!: De waarde van Nodes is nu een lijst van strings welke als nodes zijn opgeslagen.
-        // Dit betekent dat als de letter 'a' als node is opgeslagen alle 'a' symbolen in het woord
-        // als string in de lijst worden opgeslagen. Het tegenovergestelde geld voor de nodes die niet zijn
-        // opgeslagen en worden dus ook niet in de lijst getoond.
+        System.out.println(Path);
+        return Path;
     }
 
     @Override

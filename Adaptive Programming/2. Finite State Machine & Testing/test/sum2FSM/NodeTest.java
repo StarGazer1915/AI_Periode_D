@@ -7,32 +7,44 @@ import java.util.HashMap;
 
 public class NodeTest {
 
-    private Node t1 = new Node("A");
-    private Node t2 = new Node("B");
+    private Node S0 = new Node("A");
+    private Node S1 = new Node("B");
+    private Node S2 = new Node("C");
+    private Node S3 = new Node("D");
+    private Node S4 = new Node("E");
 
     @Test
     public void testGetNaam() {
-        assertEquals("A", t1.getNaam());
-        assertEquals("B", t2.getNaam());
+        assertEquals("A", S0.getNaam());
+        assertEquals("B", S1.getNaam());
     }
 
     @Test
-    public void testSetNodemap() {
-        HashMap<String, Node> NodeMap = new HashMap<>();
-        NodeMap.put("test2", t2);
+    public void testSetAndGetNodemap() {
+        HashMap <String, Node> NodeMapTest = new HashMap();
 
-        t1.setNodemap(NodeMap);
-        HashMap Map = t1.getNodemap();
+        NodeMapTest.put("A", S0);
+        NodeMapTest.put("B", S1);
 
-        assertEquals(Map , NodeMap);
+        S0.setNodemap(NodeMapTest);
+
+        assertEquals(S0.getNodemap(), NodeMapTest);
     }
 
     @Test
     public void testGetNextState() {
-        HashMap<String, Node> NodeMap = new HashMap<>();
-        NodeMap.put("A", t2);
-        t1.setNodemap(NodeMap);
+        HashMap <String, Node> NodeMapTest = new HashMap();
 
-        assertEquals(t1.getNextState("A") , t2);
+        NodeMapTest.put("A", S0);
+        NodeMapTest.put("B", S1);
+        NodeMapTest.put("C", S2);
+        NodeMapTest.put("D", S3);
+        NodeMapTest.put("E", S4);
+
+        S0.setNodemap(NodeMapTest);
+
+        assertEquals(S0.getNextState("C"), S2);
+        assertEquals(S0.getNextState("E"), S4);
+        // assertEquals(S0.getNextState("A"), S1); // Deze geeft een error wat klopt.
     }
 }

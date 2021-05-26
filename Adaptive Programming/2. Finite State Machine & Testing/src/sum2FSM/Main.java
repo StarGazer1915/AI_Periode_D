@@ -49,19 +49,19 @@ public class Main {
         NodeMap3.put("E",S0);
         NodeMap3.put("F",S5);
 
-        NodeMap0.put("A",S4);
-        NodeMap0.put("B",S0);
-        NodeMap0.put("F",S3);
+        NodeMap4.put("A",S4);
+        NodeMap4.put("B",S0);
+        NodeMap4.put("F",S3);
 
-        NodeMap0.put("A",S2);
-        NodeMap0.put("B",S3);
-        NodeMap0.put("C",S1);
-        NodeMap0.put("D",S4);
-        NodeMap0.put("E",S5);
+        NodeMap5.put("A",S2);
+        NodeMap5.put("B",S3);
+        NodeMap5.put("C",S1);
+        NodeMap5.put("D",S4);
+        NodeMap5.put("E",S5);
 
 
-        //FSM fsm = new FSM(input);
-        //fsm.startMachine("85amsterdamsegrachten24");
+        FSM fsm = new FSM(input, NodeMap0);
+        //fsm.startMachine("?");
 
     }
 }

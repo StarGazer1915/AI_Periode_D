@@ -3,40 +3,21 @@ package sum2FSM;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
 
 public class FSM {
 
     private final String input;
+    private final HashMap startMap;
 
-    public FSM(String input) {
+    public FSM(String input, HashMap startMap) {
         this.input = input;
+        this.startMap = startMap;
     }
 
     public List startMachine(String woord) {
-        HashMap<String, Node> NodeMap = new HashMap<>();
-        Random rand = new Random();
-
-        // Maakt willekeurig nodes/verbindingen met letters/nummers/tekens van de input
-        // Als de interactie met 'randint1' weggehaald zou worden dan worden alle symbolen van input als nodes opgeslagen.
-        for (char ch: input.toCharArray()) {
-            int randint1 = rand.nextInt(20);
-            if (randint1 > 10) {
-                Node X = new Node(""+ch); // De namen van de nodes zijn chars uit de input.
-                NodeMap.put(""+ch, X);
-            }
-        }
-
-        // Zet alle verbindingen voor iedere node zodat ze weten bij welke nodes ze moeten zijn.
-        for (Map.Entry<String,Node> item: NodeMap.entrySet()) {
-            Node n = item.getValue();
-            n.setNodemap(NodeMap);
-        }
-
         List<String> Nodes = new ArrayList<>();
-        Node state = (Node) NodeMap.values().toArray()[0];
-        state.setNodemap(NodeMap);
+
+        Node state = (Node) startMap.values().toArray()[0];
 
         for (char ch: woord.toCharArray()) {
             // Loop door alle symbolen van het woord heen en creer een

@@ -2,5 +2,13 @@ package Dijkstra;
 
 public class Treinrit extends Stap {
 
-    private int min;
+    private final int min;
+
+    public Treinrit(int min) {
+        this.min = min;
+    }
+
+    public int getMin() {
+        return min;
+    }
 }

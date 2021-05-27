@@ -93,8 +93,5 @@ public class Main {
         VL1.setStappen(VBravo);
 
         VL0.compareTo(VL1); // Compared de vluchten in kosten (euro's) en print het resultaat.
-
-
-
     }
 }

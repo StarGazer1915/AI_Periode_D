@@ -28,14 +28,19 @@ public class Reis implements Comparable<Reis> {
         int A = stappen.stream().mapToInt(stap -> stap.getSize()).sum();
         int B = Bravo.getTotalSize();
         if ( B > A ) {
-            System.out.println("-----| " + naam + " is korter/kleiner dan " + Bravo.getNaam() + " |-----" +
+            System.out.println("\n-----| " + naam + " is korter/kleiner/goedkoper dan " + Bravo.getNaam() + " |-----" +
                     "\n" + naam + " = " + A +
-                    "\n" + Bravo.getNaam() + " = " + B + "\n");
+                    "\n" + Bravo.getNaam() + " = " + B);
             return 1;
-        } else {
-            System.out.println("-----| " + naam + " is langer/groter dan " + Bravo.getNaam() + " |-----" +
+        } else if ( B == A ) {
+            System.out.println("\n-----| " + naam + " is gelijk aan " + Bravo.getNaam() + " |-----" +
                     "\n" + naam + " = " + A +
-                    "\n" + Bravo.getNaam() + " = " + B + "\n");
+                    "\n" + Bravo.getNaam() + " = " + B);
+            return 0;
+        } else {
+            System.out.println("\n-----| " + naam + " is langer/groter/duurder dan " + Bravo.getNaam() + " |-----" +
+                    "\n" + naam + " = " + A +
+                    "\n" + Bravo.getNaam() + " = " + B);
             return -1;
         }
     }

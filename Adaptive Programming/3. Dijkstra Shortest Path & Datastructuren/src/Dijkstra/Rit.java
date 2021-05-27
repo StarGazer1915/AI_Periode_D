@@ -12,4 +12,16 @@ public class Rit extends Stap {
     public int getKilometers() {
         return km;
     }
+
+    @Override
+    public int getSize() {
+        return km;
+    }
+
+    @Override
+    public String toString() {
+        return "Rit{" +
+                "km=" + km +
+                '}';
+    }
 }

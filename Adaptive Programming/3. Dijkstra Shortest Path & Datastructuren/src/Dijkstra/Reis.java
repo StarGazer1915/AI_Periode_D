@@ -1,8 +1,13 @@
 package Dijkstra;
 
-public class Reis {
+public class Reis implements Comparable {
+
+    //
 
 
 
-
+    @Override
+    public void CompareTo() {
+        //
+    }
 }

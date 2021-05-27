@@ -1,7 +1,5 @@
 package Dijkstra;
 
-public class Rit {
-
-
-
+public class Rit extends Stap {
+    //
 }

@@ -1,7 +1,5 @@
 package Dijkstra;
 
-public class Treinrit {
-
-
-
+public class Treinrit extends Stap {
+    //
 }

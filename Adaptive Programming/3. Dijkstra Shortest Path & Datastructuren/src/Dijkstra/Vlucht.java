@@ -1,7 +1,5 @@
 package Dijkstra;
 
-public class Vlucht {
-
-
-
+public class Vlucht extends Stap {
+    //
 }

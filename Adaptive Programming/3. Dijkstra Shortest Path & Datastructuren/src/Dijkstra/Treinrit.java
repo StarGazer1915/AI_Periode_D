@@ -12,4 +12,16 @@ public class Treinrit extends Stap {
     public int getMin() {
         return min;
     }
+
+    @Override
+    public int getSize() {
+        return min;
+    }
+
+    @Override
+    public String toString() {
+        return "Treinrit{" +
+                "min=" + min +
+                '}';
+    }
 }

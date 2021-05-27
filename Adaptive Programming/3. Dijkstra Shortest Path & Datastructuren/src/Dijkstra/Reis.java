@@ -2,7 +2,7 @@ package Dijkstra;
 
 import java.util.PriorityQueue;
 
-public class Reis implements Comparable {
+public class Reis {
 
     private String naam;
     private PriorityQueue stappen;

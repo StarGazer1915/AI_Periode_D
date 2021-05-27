@@ -75,13 +75,15 @@ public class Main {
         // ---------- Create queue for Vluchten. ---------- \\
         PriorityQueue<Stap> VAlpha = new PriorityQueue<>();
 
-        Vlucht VA0 = new Vlucht("Utrecht", "Rotterdam", 28);
+        Vlucht VA0 = new Vlucht("Amsterdam", "Parijs", 480);
+        Vlucht VA1 = new Vlucht("Parijs", "London", 300);
 
         VAlpha.add(VA0);
+        VAlpha.add(VA1);
 
         PriorityQueue<Stap> VBravo = new PriorityQueue<>();
 
-        Vlucht VB0 = new Vlucht("Utrecht", "Amsterdam", 20);
+        Vlucht VB0 = new Vlucht("Amsterdam", "London", 380);
 
         VBravo.add(VB0);
 

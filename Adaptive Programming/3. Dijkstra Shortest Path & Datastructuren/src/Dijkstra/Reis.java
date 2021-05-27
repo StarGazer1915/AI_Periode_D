@@ -18,9 +18,4 @@ public class Reis {
     public void setStappen(PriorityQueue stappen) {
         this.stappen = stappen;
     }
-
-    @Override
-    public void CompareTo() {
-        //
-    }
 }

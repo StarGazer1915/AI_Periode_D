@@ -4,7 +4,8 @@ public class Vlucht extends Stap {
 
     private final float euro;
 
-    public Vlucht(float euro) {
+    public Vlucht(String locA, String locB, float euro) {
+        super(locA, locB);
         this.euro = euro;
     }
 

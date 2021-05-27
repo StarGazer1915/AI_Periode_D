@@ -2,5 +2,13 @@ package Dijkstra;
 
 public class Rit extends Stap {
 
-    private int kilometers;
+    private final int km;
+
+    public Rit(int km) {
+        this.km = km;
+    }
+
+    public int getKilometers() {
+        return km;
+    }
 }
